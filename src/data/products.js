@@ -1,0 +1,413 @@
+// src/data/products.js
+// This file acts as our "database" of products.
+// In a real application, this data would come from an API or backend database.
+// For a beginner frontend project, storing products in a local JavaScript array
+// makes it easy to practice filtering, sorting, searching, and passing props.
+
+export const categories = [
+  { id: "all", name: "All Products", icon: "🛍️" },
+  { id: "Mobiles", name: "Mobiles", icon: "📱" },
+  { id: "Electronics", name: "Electronics", icon: "💻" },
+  { id: "Fashion", name: "Fashion", icon: "👕" },
+  { id: "Home", name: "Home", icon: "🏠" },
+  { id: "Appliances", name: "Appliances", icon: "🔌" },
+  { id: "Beauty", name: "Beauty", icon: "✨" },
+  { id: "Sports", name: "Sports", icon: "🏏" },
+  { id: "Grocery", name: "Grocery", icon: "🛒" },
+];
+
+export const products = [
+  // --- MOBILES ---
+  {
+    id: 1,
+    name: "Realme 12 Pro+ 5G (Submarine Blue, 256 GB)",
+    category: "Mobiles",
+    price: 29999,
+    originalPrice: 34999,
+    discount: 14,
+    rating: 4.4,
+    ratingCount: 18450,
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
+    description: "64MP Periscope Portrait Camera, Snapdragon 7s Gen 2 5G processor, 120Hz Curved AMOLED Display, and 5000mAh Battery with 67W SuperVOOC Charge.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 2,
+    name: "Nothing Phone (2a) 5G (Black, 128 GB)",
+    category: "Mobiles",
+    price: 23999,
+    originalPrice: 25999,
+    discount: 8,
+    rating: 4.5,
+    ratingCount: 9230,
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
+    description: "Iconic transparent Glyph Interface design, MediaTek Dimensity 7200 Pro chipset, dual 50MP rear camera system, and clean Nothing OS.",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 3,
+    name: "Samsung Galaxy M34 5G (Midnight Blue, 128 GB)",
+    category: "Mobiles",
+    price: 15999,
+    originalPrice: 24499,
+    discount: 35,
+    rating: 4.2,
+    ratingCount: 34210,
+    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
+    description: "Monster 6000mAh battery, 50MP No Shake Cam (OIS), 120Hz Super AMOLED display, and Corning Gorilla Glass 5 protection.",
+    inStock: true,
+    featured: true
+  },
+
+  // --- ELECTRONICS ---
+  {
+    id: 4,
+    name: "boAt Rockerz 450 Bluetooth Headphone",
+    category: "Electronics",
+    price: 1299,
+    originalPrice: 3990,
+    discount: 67,
+    rating: 4.3,
+    ratingCount: 142500,
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
+    description: "Up to 15 hours non-stop playback, 40mm dynamic drivers for HD immersive sound, comfortable padded ear cushions, and integrated controls.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 5,
+    name: "Noise ColorFit Pulse 2 Smartwatch",
+    category: "Electronics",
+    price: 1499,
+    originalPrice: 4999,
+    discount: 70,
+    rating: 4.1,
+    ratingCount: 88400,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+    description: "1.8 inch bright TFT LCD display with 550 nits brightness, Bluetooth calling, 24/7 heart rate and SpO2 monitor, plus 50+ sports modes.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 6,
+    name: "Sony WH-1000XM4 Noise Cancelling Headphones",
+    category: "Electronics",
+    price: 22990,
+    originalPrice: 29990,
+    discount: 23,
+    rating: 4.7,
+    ratingCount: 12400,
+    image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80",
+    description: "Industry leading active noise cancellation with Dual Noise Sensor technology. 30 hours battery life, touch sensor controls, and Speak-to-Chat.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 7,
+    name: "SanDisk Ultra 128GB MicroSD Card 140MB/s",
+    category: "Electronics",
+    price: 849,
+    originalPrice: 1800,
+    discount: 53,
+    rating: 4.4,
+    ratingCount: 65120,
+    image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80",
+    description: "Ideal for Android smartphones, tablets, and surveillance cameras. Up to 140MB/s transfer speeds let you move up to 1000 photos in a minute.",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 8,
+    name: "Zebronics 100W Dolby Cinema Soundbar",
+    category: "Electronics",
+    price: 4999,
+    originalPrice: 9999,
+    discount: 50,
+    rating: 4.0,
+    ratingCount: 7800,
+    image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=600&q=80",
+    description: "Transform your living room with rich Dolby Audio, multiple connectivity options (HDMI ARC, Optical, Bluetooth 5.0, AUX), and wireless remote control.",
+    inStock: true,
+    featured: false
+  },
+
+  // --- FASHION ---
+  {
+    id: 9,
+    name: "Men Slim Fit Denim Casual Shirt",
+    category: "Fashion",
+    price: 699,
+    originalPrice: 1999,
+    discount: 65,
+    rating: 4.2,
+    ratingCount: 31000,
+    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80",
+    description: "100% premium breathable cotton fabric, stylish spread collar, full sleeves, and double chest pockets. Perfect for casual outings and parties.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 10,
+    name: "Women Floral Printed Anarkali Kurta",
+    category: "Fashion",
+    price: 899,
+    originalPrice: 2499,
+    discount: 64,
+    rating: 4.3,
+    ratingCount: 19400,
+    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80",
+    description: "Elegant pure rayon traditional Anarkali kurta featuring handcrafted golden foil prints, three-quarter sleeves, and comfortable flared hemline.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 11,
+    name: "Puma Men Lightweight Running Shoes",
+    category: "Fashion",
+    price: 1899,
+    originalPrice: 3999,
+    discount: 52,
+    rating: 4.4,
+    ratingCount: 42100,
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    description: "High performance breathable mesh upper with EVA foam midsole cushioning. Durable rubber outsole designed for running, gym, and everyday casual wear.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 12,
+    name: "Casio Vintage Digital Steel Watch",
+    category: "Fashion",
+    price: 1695,
+    originalPrice: 2395,
+    discount: 29,
+    rating: 4.6,
+    ratingCount: 22800,
+    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80",
+    description: "Iconic retro square dial with stainless steel adjustable strap, daily alarm, 1/100 second stopwatch, auto-calendar, and water resistant build.",
+    inStock: true,
+    featured: false
+  },
+
+  // --- HOME ---
+  {
+    id: 13,
+    name: "100% Pure Cotton King Size Bedsheet with 2 Pillow Covers",
+    category: "Home",
+    price: 749,
+    originalPrice: 1999,
+    discount: 62,
+    rating: 4.1,
+    ratingCount: 16400,
+    image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80",
+    description: "210 thread count breathable cotton bedsheet, skin-friendly colors, shrink-resistant fabric, and easy machine washable for everyday comfort.",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 14,
+    name: "Wakefit Orthopedic Memory Foam Pillow",
+    category: "Home",
+    price: 899,
+    originalPrice: 1499,
+    discount: 40,
+    rating: 4.5,
+    ratingCount: 28900,
+    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80",
+    description: "Molds gently to your neck and head contours to provide optimal cervical spine support and alleviate morning neck pain.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 15,
+    name: "Milton Thermosteel Vacuum Insulated Bottle (1000ml)",
+    category: "Home",
+    price: 799,
+    originalPrice: 1140,
+    discount: 30,
+    rating: 4.4,
+    ratingCount: 45000,
+    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
+    description: "Keeps liquids hot or cold for up to 24 hours. Made with food-grade 304 stainless steel, 100% rust-proof and leak-proof lid design.",
+    inStock: true,
+    featured: false
+  },
+
+  // --- APPLIANCES ---
+  {
+    id: 16,
+    name: "Philips Digital Air Fryer with Rapid Air Tech",
+    category: "Appliances",
+    price: 7999,
+    originalPrice: 11995,
+    discount: 33,
+    rating: 4.5,
+    ratingCount: 11200,
+    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+    description: "Fry with up to 90% less oil! 4.1L capacity, 7 preset touch screen menus, keep warm function, and dishwasher-safe removable basket.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 17,
+    name: "Bajaj Rex 750W Heavy Duty Mixer Grinder",
+    category: "Appliances",
+    price: 2499,
+    originalPrice: 4200,
+    discount: 40,
+    rating: 4.2,
+    ratingCount: 54100,
+    image: "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=600&q=80",
+    description: "Powerful 750W motor with 100% copper winding. Comes with 3 stainless steel jars (Liquidizing, Wet/Dry Grinding, and Chutney Jar).",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 18,
+    name: "Morphy Richards 1.8L Stainless Steel Electric Kettle",
+    category: "Appliances",
+    price: 1199,
+    originalPrice: 2295,
+    discount: 47,
+    rating: 4.3,
+    ratingCount: 33400,
+    image: "https://images.unsplash.com/photo-1594213114663-ddf4f240f10d?auto=format&fit=crop&w=600&q=80",
+    description: "Boils water in minutes with 1500W rapid boil technology. Features auto shut-off, boil-dry safety protection, and 360-degree swivel base.",
+    inStock: true,
+    featured: false
+  },
+
+  // --- BEAUTY ---
+  {
+    id: 19,
+    name: "Mamaearth Vitamin C Face Wash with Turmeric (150ml)",
+    category: "Beauty",
+    price: 299,
+    originalPrice: 399,
+    discount: 25,
+    rating: 4.3,
+    ratingCount: 68900,
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
+    description: "Dermatologically tested glowing face wash crafted with Vitamin C and Turmeric to brighten skin tone and promote collagen production.",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 20,
+    name: "Maybelline Super Stay Matte Ink Liquid Lipstick",
+    category: "Beauty",
+    price: 489,
+    originalPrice: 699,
+    discount: 30,
+    rating: 4.4,
+    ratingCount: 42000,
+    image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=600&q=80",
+    description: "Flawless matte finish that lasts up to 16 hours! Transfer-proof, smudge-resistant formula featuring a precision arrow applicator.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 21,
+    name: "Nivea Soft Light Moisturising Cream (300ml)",
+    category: "Beauty",
+    price: 330,
+    originalPrice: 450,
+    discount: 26,
+    rating: 4.5,
+    ratingCount: 91000,
+    image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80",
+    description: "Quick-absorbing light moisturizer enriched with Vitamin E and Jojoba Oil. Gives you refreshing, soft, and supple skin in every season.",
+    inStock: true,
+    featured: false
+  },
+
+  // --- SPORTS ---
+  {
+    id: 22,
+    name: "Yonex Nanoray Carbon Fibre Badminton Racket",
+    category: "Sports",
+    price: 1799,
+    originalPrice: 3290,
+    discount: 45,
+    rating: 4.4,
+    ratingCount: 21500,
+    image: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80",
+    description: "Ultra-lightweight aerodynamic frame with isometric head shape for a larger sweet spot. Provides lightning-fast smashes and swift handling.",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: 23,
+    name: "Boldfit High-Density Eco-Friendly Yoga Mat 6mm",
+    category: "Sports",
+    price: 799,
+    originalPrice: 1999,
+    discount: 60,
+    rating: 4.3,
+    ratingCount: 35600,
+    image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=600&q=80",
+    description: "Non-slip textured surface, waterproof and sweat-resistant TPE material with carrying strap. Perfect cushioning for joints during yoga and workout.",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 24,
+    name: "Nivia Storm Football (Size 5)",
+    category: "Sports",
+    price: 449,
+    originalPrice: 650,
+    discount: 30,
+    rating: 4.2,
+    ratingCount: 17800,
+    image: "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&w=600&q=80",
+    description: "Constructed with 32 panels for true aerodynamic flight. Rubber molded outer surface suitable for hard outdoor grounds and grass turf.",
+    inStock: true,
+    featured: false
+  },
+
+  // --- GROCERY ---
+  {
+    id: 25,
+    name: "Tata Tea Gold Leaf & Long Leaves Tea (1 Kg)",
+    category: "Grocery",
+    price: 549,
+    originalPrice: 690,
+    discount: 20,
+    rating: 4.6,
+    ratingCount: 48000,
+    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80",
+    description: "Exquisite blend of rich Assam tea granules and gently rolled aromatic long leaves for an unforgettable aroma and superior taste.",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 26,
+    name: "Kellogg's Muesli with 21% Fruit, Nut & Seeds (750g)",
+    category: "Grocery",
+    price: 379,
+    originalPrice: 475,
+    discount: 20,
+    rating: 4.4,
+    ratingCount: 19300,
+    image: "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=600&q=80",
+    description: "Wholesome multigrain breakfast containing 5 nutritious grains (Wheat, Oats, Corn, Rice, Barley) loaded with raisins, almonds, and pumpkin seeds.",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 27,
+    name: "Cadbury Celebrations Premium Assorted Chocolate Gift Box (286g)",
+    category: "Grocery",
+    price: 249,
+    originalPrice: 350,
+    discount: 28,
+    rating: 4.7,
+    ratingCount: 75400,
+    image: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80",
+    description: "A mouth-watering assortment of beloved Cadbury favorites: Dairy Milk, 5 Star, Perk, and Gems. The perfect treat to celebrate every festive moment.",
+    inStock: true,
+    featured: true
+  }
+];
